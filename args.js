@@ -1,5 +1,9 @@
 'use strict'
-const num = process.argv[2];
 
+const [,,...number] = process.argv;
 
-    process.stdout.write(`${num} \n`);
+console.log('number', number);
+
+const sumUp = number.reduce((num1,num2) => {
+    console.log('Numbers added up',+num1 + +num2);
+})
